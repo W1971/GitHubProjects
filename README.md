@@ -3,7 +3,7 @@ Lesson2_HelloJava;
 
 Lesson2_Scanner;
 
-Note for Lesson2- was used path
+Note that in Lesson 2 the path used was
 
-for "art.txt, dog.txt" files  ONLY absolute, 
+absolute, not relative, for the following files "art.txt, dog.txt" 
 
