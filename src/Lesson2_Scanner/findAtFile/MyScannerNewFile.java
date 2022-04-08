@@ -1,4 +1,4 @@
-package Lesson2_Scanner;
+package Lesson2_Scanner.findAtFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
