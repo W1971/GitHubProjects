@@ -1,3 +1,9 @@
+
+/*Написать программу для вывода названия поры года по номеру
+месяца.
+При решении используйте оператор switch-case.*/
+
+
 package Lesson3.monthFinder;
 
 import java.util.Scanner;
