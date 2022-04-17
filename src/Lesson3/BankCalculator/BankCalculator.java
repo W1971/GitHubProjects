@@ -36,6 +36,7 @@ public class BankCalculator {
 
     } else {
       System.out.println("Спасибо! Ваш депозит внесен на   " + depositMonth + "  месяцев");
+    }
       System.out.println(" Банковский процент в месяц : 7%");
 
       float  monthlyBankTax = 7.0f;
@@ -51,4 +52,3 @@ public class BankCalculator {
       }
     }
   }
-}

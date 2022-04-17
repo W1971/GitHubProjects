@@ -2,3 +2,4 @@
 *.iml
 # Project exclude paths
 /out/
+*test
