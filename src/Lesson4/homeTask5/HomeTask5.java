@@ -30,28 +30,29 @@ public class HomeTask5 {
         System.out.print( i + " ");
       } else {
         System.out.println("Please insert correct numbers ");
+        return;
       }
 
-        int [] evenArr = new int [n];
+        int [] evenArr = new arr[i];
         int evenNums = 0;
 
-        for (int i = 0; i < n; i++) {
-          evenArr[i] = (int)(Math.random()*(n+1));
-          if(evenArr[i]%2 == 0){
+        for (int i = 0; i < arr.length; i++) {
+          //evenArr[i] = (int)(Math.random()*(n+1));
+          if(arr[i]%2 == 0){
             evenNums++;
-          }
+          }System.out.println(Arrays.toString(evenArr));
         }
 
-       System.out.println(Arrays.toString(evenArr));
-        int [] mas2 = new int[evenNums];
+
+        int [] arr2 = new int[evenNums];
         int index = 0;
         for (int i = 0; i < n; i++) {
           if(evenArr[i]%2 == 0){
-            mas2[index] = evenArr[i];
+            arr2[index] = evenArr[i];
             index++;
           }
         }
-        System.out.println(Arrays.toString(mas2));
+        System.out.println(Arrays.toString(arr2));
 
       }
 
