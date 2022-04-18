@@ -17,45 +17,45 @@ import java.util.Scanner;
 public class HomeTask5 {
 
   public static void main(String[] args) {
-      int n , arr[];
 
-      Scanner in = new Scanner(System.in);
-      System.out.print("Array value range from 5 to 10: ");
-      n = in.nextInt();
-      if (n>5 && n<=10) {
-        arr = new int[n];
-        for (int i = 0; i < arr.length; i++)
-          arr[i] = (int) (Math.random() * n);
-        for (int i : arr)
-        System.out.print( i + " ");
+    int n = 0;
+    Scanner sc = new Scanner(System.in);
+    System.out.print("The range of the array is from 5 to 10: ");
+
+
+    while (5 >= n || n >= 10) {
+      if (sc.hasNextInt()) {
+        n = sc.nextInt();
+        if (n < 5 || n > 10) {
+          System.out.println("The number entered must be greater than 5 and less than 10. Repeat the entry:");
+        }
       } else {
-        System.out.println("Please insert correct numbers ");
-        return;
+        System.out.println("You entered a wrong number. Repeat the entry:");
+        sc.next();
       }
-
-        int [] evenArr = new arr[i];
-        int evenNums = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-          //evenArr[i] = (int)(Math.random()*(n+1));
-          if(arr[i]%2 == 0){
-            evenNums++;
-          }System.out.println(Arrays.toString(evenArr));
-        }
-
-
-        int [] arr2 = new int[evenNums];
-        int index = 0;
-        for (int i = 0; i < n; i++) {
-          if(evenArr[i]%2 == 0){
-            arr2[index] = evenArr[i];
-            index++;
-          }
-        }
-        System.out.println(Arrays.toString(arr2));
-
-      }
-
     }
 
+    int[] evenArr = new int[n];
+    int evenNums = 0;
+
+    for (int i = 0; i < n; i++) {
+      evenArr[i] = (int) (Math.random() * (n + 1));
+      if (evenArr[i] % 2 == 0) {
+        evenNums++;
+      }
+    }
+      System.out.println(Arrays.toString(evenArr));
+
+      int[] arr2 = new int[evenNums];
+      int index = 0;
+      for (int i = 0; i < n; i++) {
+        if (evenArr[i] % 2 == 0) {
+          arr2[index] = evenArr[i];
+          index++;
+        }
+      }
+      System.out.println(Arrays.toString(arr2));
+
+        }
+      }
 
