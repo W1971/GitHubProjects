@@ -1,4 +1,4 @@
-package Lesson6.classWork;
+package Lesson6.ClassWork;
 
 public class TicketBooking {
    private String passName;

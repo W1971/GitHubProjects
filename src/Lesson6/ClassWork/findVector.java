@@ -1,4 +1,4 @@
-package Lesson6.classWork;
+package Lesson6.ClassWork;
 
 public class findVector {
   public static void main(String[] args) {

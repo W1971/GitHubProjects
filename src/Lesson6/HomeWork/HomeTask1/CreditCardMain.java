@@ -9,35 +9,32 @@
 Положите деньги на первые две карточки и снимите с третьей.
 Выведите на экран текущее состояние всех трех карточек.*/
 
-package Lesson6.classWork.homeTask1;
+package Lesson6.HomeWork.HomeTask1;
+
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class CreditCardMain {
-  public static void main(String[] args) {
 
-    PersonalInformation name = new PersonalInformation();
-    name.setName("Vladimir");
-    System.out.println("Your name is  " + name.getName());
-    System.out.println();
+  public static void main(String[] args) throws IOException, CreditCard.WrongPinCodeExeptions {
+    CreditCard myCard = new CreditCard();
+    myCard.createBankCard();
 
-    PersonalInformation dob = new PersonalInformation();
-    dob.setDateOfBirth(240371);
-    System.out.println("Your DOB " + dob.getDateOfBirth());
-    System.out.println();
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    while (true) {
+      System.out.println("Amount to withdraw");
+      try {
+        myCard.getMoney(Double.parseDouble(reader.readLine()));
+        break;
+      } catch (CreditCard.MinusBalanceException | NumberFormatException e) {
+        System.out.println(e);
+      }
+    }
 
-    AccountData cardType = new AccountData();
-    cardType.setCardType("Visa");
-    System.out.println("Your card is :" + cardType.getCardType());
-    System.out.println();
-
-    AccountData cardNumber = new AccountData();
-    cardNumber.setCreditCardNumber(1234567);
-    System.out.println("Your card number is  " +cardNumber.getCreditCardNumber());
-    System.out.println();
-
-
-
-
-
-
+    System.out.println(myCard);
   }
 }
+
+
